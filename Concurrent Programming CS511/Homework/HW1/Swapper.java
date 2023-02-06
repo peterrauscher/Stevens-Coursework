@@ -14,5 +14,9 @@ public class Swapper implements Runnable {
     @Override
     public void run() {
         // TODO: Implement me!
+        CharSequence threadContent = content.subSequence(interval.getX(), interval.getY());
+        for (int i = 0; i < threadContent.length(); i++) {
+            buffer[i + offset] = threadContent.charAt(i);
+        }
     }
 }

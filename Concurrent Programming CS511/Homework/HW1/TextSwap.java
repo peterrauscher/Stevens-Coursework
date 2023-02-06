@@ -6,8 +6,12 @@ import java.util.ArrayList;
 import java.util.List;
 import java.util.Scanner;
 
-// Author: Peter Rauscher 
-// I pledge my honor that I have abided by the Stevens Honor System.
+/**
+ * Homework 1 for CS511, concurrent file writing
+ * "I pledge my honor that I have abided by the Stevens Honor System."
+ * - Peter Rauscher
+ */
+
 public class TextSwap {
 
     private static String readFile(String filename, int chunkSize) throws Exception {
@@ -53,10 +57,20 @@ public class TextSwap {
         List<Character> labels = getLabels(numChunks);
         Interval[] intervals = getIntervals(numChunks, chunkSize);
         // TODO: Order the intervals properly, then run the Swapper instances.
-        char[] fileOutBuffer = new char[chunkSize * numChunks];
-        for (int newFileIndex = 0; newFileIndex < labels.size(); newFileIndex++) {
+        char[] fileOutBuffer = new char[content.length()];
+        Thread swapperThreads[] = new Thread[numChunks];
+        for (int newFileIndex = 0; newFileIndex < numChunks; newFileIndex++) {
             int oldFileIndex = labels.get(newFileIndex) - 97;
-            new Swapper(intervals[oldFileIndex], content, fileOutBuffer, chunkSize * newFileIndex).run();
+            Swapper swapper = new Swapper(intervals[oldFileIndex], content, fileOutBuffer, chunkSize * newFileIndex);
+            swapperThreads[newFileIndex] = new Thread(swapper);
+            swapperThreads[newFileIndex].start();
+        }
+        try {
+            for (Thread swapperThread : swapperThreads) {
+                swapperThread.join();
+            }
+        } catch (InterruptedException e) {
+            e.printStackTrace();
         }
         return fileOutBuffer;
     }

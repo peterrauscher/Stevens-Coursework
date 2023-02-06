@@ -1,7 +1,7 @@
 public class Interval {
     private int x;
     private int y;
-
+    
     public Interval(int x, int y) {
         this.x = x;
         this.y = y;
@@ -12,7 +12,7 @@ public class Interval {
     }
 
     public int getY() {
-        return this.y;
+         return this.y;
     }
 
     public String toString() {
