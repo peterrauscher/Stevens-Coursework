@@ -1,0 +1,21 @@
+{
+  "name": "cs-554-lab-4-server",
+  "version": "1.0.0",
+  "description": "",
+  "main": "app.js",
+  "scripts": {
+    "start": "node app.js",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Peter Rauscher (10441546)",
+  "license": "ISC",
+  "dependencies": {
+    "axios": "^0.27.2",
+    "blueimp-md5": "^2.19.0",
+    "cors": "^2.8.5",
+    "express": "^4.18.1",
+    "flat": "^5.0.2",
+    "parse-json": "^6.0.2",
+    "redis": "^4.3.1"
+  }
+}

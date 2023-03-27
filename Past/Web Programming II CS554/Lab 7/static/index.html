@@ -1,0 +1,381 @@
+<!DOCTYPE html>
+
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <title>The Hotdog Archive</title>
+    <meta
+      name="description"
+      content="An archive of the world's greatest award-winning hotdog-based creations."
+    />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link rel="stylesheet" href="/public/css/styles.min.css" />
+    <script
+      src="https://kit.fontawesome.com/05aecf45ff.js"
+      crossorigin="anonymous"
+    ></script>
+  </head>
+  <body>
+    <div
+      class="modal fade"
+      id="detailsModal"
+      tabindex="-1"
+      aria-labelledby="detailsModalLabel"
+      aria-hidden="true"
+    >
+      <div class="modal-dialog">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h1 class="modal-title fs-5" id="detailsModalLabel"></h1>
+            <button
+              type="button"
+              class="btn-close"
+              data-bs-dismiss="modal"
+              aria-label="Close"
+            ></button>
+          </div>
+          <div class="modal-body" id="detailsModalBody"></div>
+          <div class="modal-footer">
+            <button
+              type="button"
+              class="btn btn-secondary"
+              data-bs-dismiss="modal"
+            >
+              Close
+            </button>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="container-fluid">
+      <div class="row">
+        <div class="col-sm-auto bg-red sticky-top overflow-auto">
+          <div
+            class="d-flex flex-sm-column flex-row flex-nowrap align-items-center sticky-top bg-red"
+          >
+            <a
+              href="/"
+              aria-label="Home Button"
+              class="d-block p-3 text-decoration-none"
+              ><i class="fa-solid fa-hotdog mustard-text"></i
+            ></a>
+            <ul
+              class="nav nav-pills nav-flush flex-sm-column flex-row flex-nowrap mb-auto mx-auto text-center align-items-center"
+            >
+              <li class="nav-item">
+                <a href="#allamerican" class="nav-link py-3 px-2 mustard-text"
+                  >All American</a
+                >
+              </li>
+              <li>
+                <a href="#newyorker" class="nav-link py-3 px-2 mustard-text"
+                  >New Yorker</a
+                >
+              </li>
+              <li>
+                <a href="#boston" class="nav-link py-3 px-2 mustard-text"
+                  >Boston</a
+                >
+              </li>
+              <li>
+                <a href="#detroitconey" class="nav-link py-3 px-2 mustard-text"
+                  >Detroit-Coney</a
+                >
+              </li>
+              <li>
+                <a href="#hawaiian" class="nav-link py-3 px-2 mustard-text"
+                  >Hawaiian</a
+                >
+              </li>
+              <li>
+                <a href="#jamaican" class="nav-link py-3 px-2 mustard-text"
+                  >Jamaican</a
+                >
+              </li>
+              <li>
+                <a href="#polish" class="nav-link py-3 px-2 mustard-text"
+                  >Polish</a
+                >
+              </li>
+              <li>
+                <a href="#blt" class="nav-link py-3 px-2 mustard-text">BLT</a>
+              </li>
+              <li>
+                <a href="#surfnturf" class="nav-link py-3 px-2 mustard-text"
+                  >Surf N' Turf</a
+                >
+              </li>
+              <li>
+                <a href="#bratwurst" class="nav-link py-3 px-2 mustard-text"
+                  >Bratwurst</a
+                >
+              </li>
+            </ul>
+          </div>
+        </div>
+        <div class="col-sm p-3 min-vh-100 text-center bg-yellow">
+          <main>
+            <h1>
+              <i class="fa-solid fa-hotdog"></i> The Hotdog Archive
+              <i class="fa-solid fa-hotdog"></i>
+            </h1>
+            <p class="lead">
+              Expeirence hotdogs in a completely new way. With the hotdog
+              archive, all of your hotdog-centric needs will be met. Step
+              through the history of some of the most monumental and
+              scientifically significant creations in the hotdog's fascinating
+              history.
+            </p>
+            <hr />
+            <div class="row">
+              <div class="col-sm-12 col-md-6 col-lg-4 hotdog-item">
+                <div class="card" id="allamerican">
+                  <img
+                    src="/public/minages/allamericandog.jpg"
+                    class="card-img-top"
+                    alt="The All American Dog"
+                  />
+                  <div class="card-body">
+                    <h5 class="card-title">The All-American</h5>
+                    <p class="card-text">
+                      This hotdog is so American, it owns multiple firearms and
+                      pays hundreds of dollars a month for health insurance.
+                    </p>
+                    <button
+                      type="button"
+                      class="btn btn-primary more-btn"
+                      data-bs-toggle="modal"
+                      data-bs-target="#detailsModal"
+                    >
+                      More
+                    </button>
+                  </div>
+                </div>
+              </div>
+              <div class="col-sm-12 col-md-6 col-lg-4 hotdog-item">
+                <div class="card" id="newyorker">
+                  <img
+                    src="/public/minages/newyorkerdog.jpg"
+                    class="card-img-top"
+                    alt="The New Yorker Dog"
+                  />
+                  <div class="card-body">
+                    <h5 class="card-title">The New Yorker</h5>
+                    <p class="card-text">
+                      If you bumped into this hotdog's new North Face jacket on
+                      the street, or accidentatly stepped on it's Air Forces, it
+                      would yell "I'm walking here!" and try and fight you.
+                    </p>
+                    <button
+                      type="button"
+                      class="btn btn-primary more-btn"
+                      data-bs-toggle="modal"
+                      data-bs-target="#detailsModal"
+                    >
+                      More
+                    </button>
+                  </div>
+                </div>
+              </div>
+              <div class="col-sm-12 col-md-6 col-lg-4 hotdog-item">
+                <div class="card" id="boston">
+                  <img
+                    src="/public/minages/bostondog.jpg"
+                    class="card-img-top"
+                    alt="The Boston Dog"
+                  />
+                  <div class="card-body">
+                    <h5 class="card-title">The Boston</h5>
+                    <p class="card-text">
+                      "Dude, what if we put the baked beans ON the hot dog?"
+                      Only the geniuses in Boston could come up with this one.
+                      Wicked schmart.
+                    </p>
+                    <button
+                      type="button"
+                      class="btn btn-primary more-btn"
+                      data-bs-toggle="modal"
+                      data-bs-target="#detailsModal"
+                    >
+                      More
+                    </button>
+                  </div>
+                </div>
+              </div>
+              <div class="col-sm-12 col-md-6 col-lg-4 hotdog-item">
+                <div class="card" id="detroitconey">
+                  <img
+                    src="/public/minages/detroitconeydog.jpg"
+                    class="card-img-top"
+                    alt="The Detroit-Coney Dog"
+                  />
+                  <div class="card-body">
+                    <h5 class="card-title">The Detroit-Coney</h5>
+                    <p class="card-text">
+                      Pretty similar to the Boston dog, but with a little
+                      Detroit and Coney Island twist. So a higher crime rate.
+                    </p>
+                    <button
+                      type="button"
+                      class="btn btn-primary more-btn"
+                      data-bs-toggle="modal"
+                      data-bs-target="#detailsModal"
+                    >
+                      More
+                    </button>
+                  </div>
+                </div>
+              </div>
+              <div class="col-sm-12 col-md-6 col-lg-4 hotdog-item">
+                <div class="card" id="hawaiian">
+                  <img
+                    src="/public/minages/hawaiiandog.jpg"
+                    class="card-img-top"
+                    alt="The Hawaiian Dog"
+                  />
+                  <div class="card-body">
+                    <h5 class="card-title">The Hawaiian</h5>
+                    <p class="card-text">
+                      We took the most hated kind of pizza, and said "it would
+                      probably work better on a hot dog."
+                    </p>
+                    <button
+                      type="button"
+                      class="btn btn-primary more-btn"
+                      data-bs-toggle="modal"
+                      data-bs-target="#detailsModal"
+                    >
+                      More
+                    </button>
+                  </div>
+                </div>
+              </div>
+              <div class="col-sm-12 col-md-6 col-lg-4 hotdog-item">
+                <div class="card" id="jamaican">
+                  <img
+                    src="/public/minages/jamaicandog.jpg"
+                    class="card-img-top"
+                    alt="The Jamaican Dog"
+                  />
+                  <div class="card-body">
+                    <h5 class="card-title">The Jamaican</h5>
+                    <p class="card-text">
+                      I don't know what the chicken we put on this dog did, but
+                      everyone kept calling him a jerk!
+                    </p>
+                    <button
+                      type="button"
+                      class="btn btn-primary more-btn"
+                      data-bs-toggle="modal"
+                      data-bs-target="#detailsModal"
+                    >
+                      More
+                    </button>
+                  </div>
+                </div>
+              </div>
+              <div class="col-sm-12 col-md-6 col-lg-4 hotdog-item">
+                <div class="card" id="polish">
+                  <img
+                    src="/public/minages/polishdog.jpg"
+                    class="card-img-top"
+                    alt="The Polish Dog"
+                  />
+                  <div class="card-body">
+                    <h5 class="card-title">The Polish</h5>
+                    <p class="card-text">
+                      If hotdogs could get drunk, this would be the one to make
+                      it happen.
+                    </p>
+                    <button
+                      type="button"
+                      class="btn btn-primary more-btn"
+                      data-bs-toggle="modal"
+                      data-bs-target="#detailsModal"
+                    >
+                      More
+                    </button>
+                  </div>
+                </div>
+              </div>
+              <div class="col-sm-12 col-md-6 col-lg-4 hotdog-item">
+                <div class="card" id="blt">
+                  <img
+                    src="/public/minages/bltdog.jpg"
+                    class="card-img-top"
+                    alt="The BLT Dog"
+                  />
+                  <div class="card-body">
+                    <h5 class="card-title">The BLT</h5>
+                    <p class="card-text">
+                      Why have pork one way when you can have it two?
+                    </p>
+                    <button
+                      type="button"
+                      class="btn btn-primary more-btn"
+                      data-bs-toggle="modal"
+                      data-bs-target="#detailsModal"
+                    >
+                      More
+                    </button>
+                  </div>
+                </div>
+              </div>
+              <div class="col-sm-12 col-md-6 col-lg-4 hotdog-item">
+                <div class="card" id="surfnturf">
+                  <img
+                    src="/public/minages/surfandturfdog.jpg"
+                    class="card-img-top"
+                    alt="The Surf and Turf Dog"
+                  />
+                  <div class="card-body">
+                    <h5 class="card-title">The Surf N' Turf</h5>
+                    <p class="card-text">
+                      Because the first thing you think when you think hotdog is
+                      seafood.
+                    </p>
+                    <button
+                      type="button"
+                      class="btn btn-primary more-btn"
+                      data-bs-toggle="modal"
+                      data-bs-target="#detailsModal"
+                    >
+                      More
+                    </button>
+                  </div>
+                </div>
+              </div>
+              <div class="col-sm-12 col-md-6 col-lg-4 hotdog-item">
+                <div class="card" id="bratwurst">
+                  <img
+                    src="/public/minages/bratwurstdog.jpg"
+                    class="card-img-top"
+                    alt="The Bratwurst Dog"
+                  />
+                  <div class="card-body">
+                    <h5 class="card-title">The Bratwurst</h5>
+                    <p class="card-text">
+                      What your German grandfather makes you when he realizes
+                      how much cheaper hotdogs are than real sausage.
+                    </p>
+                    <button
+                      type="button"
+                      class="btn btn-primary more-btn"
+                      data-bs-toggle="modal"
+                      data-bs-target="#detailsModal"
+                    >
+                      More
+                    </button>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </main>
+        </div>
+      </div>
+    </div>
+    <script src="/public/js/vendor.min.js"></script>
+    <script src="/public/js/modals.js"></script>
+  </body>
+</html>
