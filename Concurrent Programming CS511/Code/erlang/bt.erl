@@ -2,7 +2,7 @@
 -compile(nowarn_export_all).
 -compile(export_all).
 %% -export([t1/0]).
--author("P.R.").
+-author("E.B.").
 
 %%% Playing with tuples and atoms 
 %%% Encoding binary trees.

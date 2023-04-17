@@ -111,3 +111,5 @@ A common abbreviation for doing nothing until a condition holds is `await !cond`
 
 - In Erlang, there is no assignment. There is only matching.
   `P = E`
+
+## Model Checking
