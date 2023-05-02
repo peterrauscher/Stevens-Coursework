@@ -1,0 +1,46 @@
+  1:	proc  0 (:init:) fmep_mc.pml:24 (state 1)	[x = 0]
+  2:	proc  0 (:init:) fmep_mc.pml:24 (state 7)	[((x<=1))]
+  3:	proc  0 (:init:) fmep_mc.pml:25 (state 3)	[flag[x] = 0]
+  4:	proc  0 (:init:) fmep_mc.pml:24 (state 4)	[x = (x+1)]
+  5:	proc  0 (:init:) fmep_mc.pml:24 (state 7)	[((x<=1))]
+  6:	proc  0 (:init:) fmep_mc.pml:25 (state 3)	[flag[x] = 0]
+  7:	proc  0 (:init:) fmep_mc.pml:24 (state 4)	[x = (x+1)]
+  8:	proc  0 (:init:) fmep_mc.pml:24 (state 7)	[else]
+  9:	proc  0 (:init:) fmep_mc.pml:28 (state 10)	[i = 0]
+ 10:	proc  0 (:init:) fmep_mc.pml:29 (state 20)	[i = 0]
+ 11:	proc  0 (:init:) fmep_mc.pml:29 (state 17)	[((i<=1))]
+ 12:	proc  0 (:init:) fmep_mc.pml:30 (state 13)	[(run T(i))]
+ 13:	proc  0 (:init:) fmep_mc.pml:29 (state 14)	[i = (i+1)]
+ 14:	proc  0 (:init:) fmep_mc.pml:29 (state 17)	[((i<=1))]
+ 15:	proc  0 (:init:) fmep_mc.pml:30 (state 13)	[(run T(i))]
+ 16:	proc  0 (:init:) fmep_mc.pml:29 (state 14)	[i = (i+1)]
+ 17:	proc  0 (:init:) fmep_mc.pml:29 (state 17)	[else]
+ 18:	proc  0 (:init:) fmep_mc.pml:31 (state 16)	[goto :b4]
+ 19:	proc  0 (:init:) fmep_mc.pml:31 (state 19)	[break]
+ 20:	proc  2 (T) fmep_mc.pml:7 (state 18)	[((turn!=me))]
+ 21:	proc  2 (T) fmep_mc.pml:9 (state 5)	[else]
+ 22:	proc  2 (T) fmep_mc.pml:12 (state 8)	[turn = me]
+ 23:	proc  2 (T) fmep_mc.pml:7 (state 11)	[else]
+1 went in
+ 24:	proc  2 (T) fmep_mc.pml:15 (state 14)	[printf('%x went in\n',me)]
+pan:1: assertion violated (flag[me]!=flag[(1-me)]) (at depth 25)
+spin: trail ends after 25 steps
+#processes 3:
+ 25:	proc 0 (:init:)  fmep_mc.pml:33 (state 21)
+		-end-
+ 25:	proc 1 (T)  fmep_mc.pml:7 (state 18) (invalid end state)
+		((turn!=me))
+		else
+ 25:	proc 2 (T)  fmep_mc.pml:16 (state 15) (invalid end state)
+		assert((flag[me]!=flag[(1-me)]))
+global vars:
+	byte   turn:	1
+	bit    flag[0]:	0
+	bit    flag[1]:	0
+local vars proc 0 (:init:):
+	int    x:	2
+	int    i:	2
+local vars proc 1 (T):
+	byte   me:	0
+local vars proc 2 (T):
+	byte   me:	1
